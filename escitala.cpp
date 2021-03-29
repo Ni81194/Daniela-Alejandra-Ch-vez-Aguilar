@@ -3,23 +3,23 @@
 using namespace std;
 class algoritmoX{
 private: 
-   int clave=63;
+   int a=6,b=3;
 public:
    string cifrado(string & mensaje){ 
      string mensajeC=mensaje+ "  ";
      mensaje="";
-      for (int i=0; i< clave/10; i++){
-        for (int j=0; j< clave%10; j++){
-        mensaje= mensaje+mensajeC[j*(clave/10)+i]; 
+      for (int i=0; i< a; i++){
+        for (int j=0; j< b; j++){
+        mensaje= mensaje+mensajeC[j*(a)+i]; 
           }
       }    
      return mensaje;
    }
    string decifrado(string & mensajeC){ 
      string mensajeO="";
-      for (int i=0; i<clave%10; i++){
-        for (int j=0; j< clave/10; j++){
-        mensajeO= mensajeO + mensajeC[j*(clave%10)+i]; 
+      for (int i=0; i<b; i++){
+        for (int j=0; j< a; j++){
+        mensajeO= mensajeO + mensajeC[j*(b)+i]; 
       }
       }
      return mensajeO;
